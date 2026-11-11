@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "random_piecewise_hazards": 1200,
+  "minimum_observed_envelope_slack": 8.03130778268546e-05,
+  "shifted_exponential_equalities": 16,
+  "scalar_optimizer_checks": [
+    {
+      "r": 0.0001,
+      "precision_x": 0.003922368088190348,
+      "diffusion_x": 0.0024676227002062767
+    },
+    {
+      "r": 0.001,
+      "precision_x": 0.01832929168739761,
+      "diffusion_x": 0.01147476969805132
+    },
+    {
+      "r": 0.1,
+      "precision_x": 0.4578384972459919,
+      "diffusion_x": 0.25015066988372003
+    },
+    {
+      "r": 0.9,
+      "precision_x": 2.7981604068454766,
+      "diffusion_x": 0.9480313648138421
+    },
+    {
+      "r": 1.0,
+      "precision_x": 3.0760999022066526,
+      "diffusion_x": 1.0
+    },
+    {
+      "r": 2.0,
+      "precision_x": 5.827108336318533,
+      "diffusion_x": 2.0
+    }
+  ],
+  "scope": "finite numerical diagnostics; analytical proofs remain authoritative"
+}

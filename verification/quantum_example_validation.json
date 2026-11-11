@@ -1,0 +1,196 @@
+{
+  "status": "passed",
+  "numpy_version": "2.3.5",
+  "scipy_version": "1.17.0",
+  "strength_convention": "Gamma=1; centered H halfwidth<=1; summed intrinsic tick effect Q<=I",
+  "methods": [
+    "d-by-d complex Lyapunov resolvents with reset identity",
+    "independent actual d^2-by-d^2 no-tick Liouville moments at d=16 and d=32",
+    "exact all-CTMC comparator from proved adjacent-ladder frontier"
+  ],
+  "maximum_relative_solver_disagreement": 3.723688024592775e-13,
+  "witnesses": [
+    {
+      "dimension": 16,
+      "Gamma_over_gamma": 100.0,
+      "initial_sigma": 2.5,
+      "absorber_width": 1.5,
+      "absorber_baseline": 0.0001,
+      "hamiltonian_halfwidth": 1.0,
+      "maximum_total_tick_effect": 1.0,
+      "minimum_total_tick_effect": 0.00010066576956337104,
+      "nominal": {
+        "mean": 16.65730604322117,
+        "variance": 11.731470935978848,
+        "precision": 23.65141133040546,
+        "restart_success_probability": 1.0,
+        "lyapunov_relative_residual": 1.273608944250569e-14,
+        "absorption_identity_error": 2.1094237467877974e-15
+      },
+      "faulty": {
+        "mean": 18.05562961737408,
+        "variance": 31.905813159807117,
+        "precision": 10.217754339841653,
+        "restart_success_probability": 0.8470582921297904,
+        "lyapunov_relative_residual": 1.0497500469730396e-14,
+        "absorption_identity_error": 6.661338147750939e-16
+      },
+      "all_CTMC_optimal_ladder_stages": 17,
+      "all_CTMC_optimal_precision": 8.709223885996844,
+      "precision_ratio_to_all_CTMC_optimum": 1.1732106641867717,
+      "quantum_timing_diffusion": 1.7670839420136122,
+      "all_CTMC_timing_diffusion_lower_bound": 0.9900990099009901,
+      "independent_full_Liouville": {
+        "mean": 18.05562961737408,
+        "variance": 31.905813159807224,
+        "precision": 10.217754339841617,
+        "full_generator_relative_residual": 8.148388149671995e-15
+      },
+      "maximum_relative_solver_disagreement": 3.4416913763379853e-15
+    },
+    {
+      "dimension": 24,
+      "Gamma_over_gamma": 1000.0,
+      "initial_sigma": 2.5,
+      "absorber_width": 1.5,
+      "absorber_baseline": 0.0001,
+      "hamiltonian_halfwidth": 1.0000000000000004,
+      "maximum_total_tick_effect": 1.0,
+      "minimum_total_tick_effect": 0.0001000000000126629,
+      "nominal": {
+        "mean": 28.989826561702728,
+        "variance": 12.885216888326795,
+        "precision": 65.22280931405696,
+        "restart_success_probability": 1.0,
+        "lyapunov_relative_residual": 2.0544637220463962e-14,
+        "absorption_identity_error": 3.9968028886505635e-15
+      },
+      "faulty": {
+        "mean": 29.407487288503614,
+        "variance": 21.628376918525326,
+        "precision": 39.98452181045427,
+        "restart_success_probability": 0.9714326079306418,
+        "lyapunov_relative_residual": 1.9353010332751635e-14,
+        "absorption_identity_error": 1.6653345369377348e-15
+      },
+      "all_CTMC_optimal_ladder_stages": 55,
+      "all_CTMC_optimal_precision": 27.402130562903668,
+      "precision_ratio_to_all_CTMC_optimum": 1.4591756549245967,
+      "quantum_timing_diffusion": 0.7354717765016461,
+      "all_CTMC_timing_diffusion_lower_bound": 0.9990009990009991
+    },
+    {
+      "dimension": 32,
+      "Gamma_over_gamma": 2000.0,
+      "initial_sigma": 2.5,
+      "absorber_width": 1.5,
+      "absorber_baseline": 0.0001,
+      "hamiltonian_halfwidth": 1.0000000000000004,
+      "maximum_total_tick_effect": 1.0,
+      "minimum_total_tick_effect": 0.0001,
+      "nominal": {
+        "mean": 41.409530700585755,
+        "variance": 14.756478662260406,
+        "precision": 116.20314521432634,
+        "restart_success_probability": 1.0,
+        "lyapunov_relative_residual": 3.350044044051243e-14,
+        "absorption_identity_error": 2.886579864025407e-15
+      },
+      "faulty": {
+        "mean": 41.83742334960287,
+        "variance": 27.163270149422225,
+        "precision": 64.43885375013018,
+        "restart_success_probability": 0.979509914515638,
+        "lyapunov_relative_residual": 3.191635123956163e-14,
+        "absorption_identity_error": 8.548717289613705e-15
+      },
+      "all_CTMC_optimal_ladder_stages": 77,
+      "all_CTMC_optimal_precision": 38.740561663026696,
+      "precision_ratio_to_all_CTMC_optimum": 1.6633433017990928,
+      "quantum_timing_diffusion": 0.6492577213094568,
+      "all_CTMC_timing_diffusion_lower_bound": 0.9995002498750625,
+      "independent_full_Liouville": {
+        "mean": 41.83742334960316,
+        "variance": 27.163270149412483,
+        "precision": 64.43885375015417,
+        "full_generator_relative_residual": 1.433493727263361e-14
+      },
+      "maximum_relative_solver_disagreement": 3.723688024592775e-13
+    },
+    {
+      "dimension": 64,
+      "Gamma_over_gamma": 10000.0,
+      "initial_sigma": 2.5,
+      "absorber_width": 1.5,
+      "absorber_baseline": 0.0001,
+      "hamiltonian_halfwidth": 1.0,
+      "maximum_total_tick_effect": 1.0,
+      "minimum_total_tick_effect": 0.0001,
+      "nominal": {
+        "mean": 91.18987756357562,
+        "variance": 38.87306822728351,
+        "precision": 213.91657899088904,
+        "restart_success_probability": 1.0,
+        "lyapunov_relative_residual": 8.265522597847462e-14,
+        "absorption_identity_error": 3.552713678800501e-15
+      },
+      "faulty": {
+        "mean": 91.60496000789662,
+        "variance": 64.8360271201269,
+        "precision": 129.42601622552834,
+        "restart_success_probability": 0.9909226569637913,
+        "lyapunov_relative_residual": 8.157819413691315e-14,
+        "absorption_identity_error": 6.661338147750939e-16
+      },
+      "all_CTMC_optimal_ladder_stages": 173,
+      "all_CTMC_optimal_precision": 86.60759972731199,
+      "precision_ratio_to_all_CTMC_optimum": 1.494395603076775,
+      "quantum_timing_diffusion": 0.7077785647691767,
+      "all_CTMC_timing_diffusion_lower_bound": 0.9999000099990001
+    }
+  ],
+  "baseline_sensitivity": [
+    {
+      "dimension": 32,
+      "Gamma_over_gamma": 2000.0,
+      "baseline": 1e-10,
+      "quantum_precision": 70.74176084188493,
+      "all_CTMC_optimal_precision": 38.740561663026696,
+      "precision_ratio": 1.8260385963737744,
+      "lyapunov_relative_residual": 3.169056239024008e-14
+    },
+    {
+      "dimension": 32,
+      "Gamma_over_gamma": 2000.0,
+      "baseline": 1e-06,
+      "quantum_precision": 70.67263958258614,
+      "all_CTMC_optimal_precision": 38.740561663026696,
+      "precision_ratio": 1.8242543873604924,
+      "lyapunov_relative_residual": 3.337157018435431e-14
+    },
+    {
+      "dimension": 32,
+      "Gamma_over_gamma": 2000.0,
+      "baseline": 0.0001,
+      "quantum_precision": 64.43885375013018,
+      "all_CTMC_optimal_precision": 38.740561663026696,
+      "precision_ratio": 1.6633433017990928,
+      "lyapunov_relative_residual": 3.191635123956163e-14
+    },
+    {
+      "dimension": 32,
+      "Gamma_over_gamma": 2000.0,
+      "baseline": 0.001,
+      "quantum_precision": 35.76676928267227,
+      "all_CTMC_optimal_precision": 38.740561663026696,
+      "precision_ratio": 0.9232382739769992,
+      "lyapunov_relative_residual": 2.9301839693527906e-14
+    }
+  ],
+  "limits": [
+    "floating-point numerical witnesses, not formal interval certificates",
+    "finite samples do not establish the asymptotic exponent",
+    "static phenomenological reset interfaces; no microscopic synthesis-cost claim",
+    "the sampled parameters are illustrative and are not claimed optimal"
+  ]
+}
