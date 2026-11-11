@@ -1,0 +1,25 @@
+# Quantum Clock Restart Limits
+
+Scientific question: optimize autonomous timekeeping under hidden Poisson faults that erase the entire internal clockwork, with fixed intrinsic strength.
+
+Start with README.md and science/model.md. The exact classical weak-fault precision is asymptotic to sqrt(3Γ/γ)/2. The quantum optimum has logarithmic exponent2/3 inΓ/γ, not a proved constant-factorTheta law. For calibrated tick counts, the observation-time limit at each fixed finite clock precedes device/noise optimization.
+
+Question routes:
+- Which events and registers count? science/model.md.
+- What does an unobserved restart do to the full physical waiting time? science/restart_and_hazard.md.
+- Why is the delayed-exponential hazard envelope sharp? science/restart_and_hazard.md, fixed-mean theorem and scalar optimizer.
+- Why can no bounded-rate finite classical Markov network beat an Erlang ladder? science/classical_optimum.md.
+- Does the coherent construction hide growing Hamiltonian or tick strength? science/quantum_construction.md.
+- What happens to actual elapsed-time error? science/timing_diffusion.md.
+- Which ingredients are inherited? references/RELATED_WORK.md and references/REFERENCES.md.
+- Which explicit finite clock beats the all-classical benchmark? science/finite_example.md.
+- Which finite calculations were checked? verification/README.md.
+
+Preserve these distinctions:
+- Every tick and hidden fault resets all INTERNAL clockwork to the same common state; the passive output counter does not feed back.
+- Faults do not produce ticks or observed flags.
+- Total intrinsic event strength is bounded, rather than a separate free rate per channel.
+- Classical means arbitrary finite autonomous CTMC, not unrestricted deterministic oscillators.
+- The exact hazard envelope is a relaxed-distribution optimum; its sharp constant is not claimed attainable by finite quantum clocks.
+- The coherent reset interface is specified at effective-generator level. No microscopic thermodynamic or fabrication efficiency is claimed.
+- Clock dimension can grow only after each finite-device time limit is defined. No uniform finite-horizon claim.

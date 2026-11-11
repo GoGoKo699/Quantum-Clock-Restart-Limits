@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "seed": 81623,
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "random_generator_checks": [
+    {
+      "Gamma_over_gamma": 0.3,
+      "CTMCs_checked": 330,
+      "optimal_ladder_stages": 2,
+      "optimal_precision": 1.07563025210084,
+      "largest_random_fraction_of_optimum": 0.9418693324004351
+    },
+    {
+      "Gamma_over_gamma": 1,
+      "CTMCs_checked": 330,
+      "optimal_ladder_stages": 2,
+      "optimal_precision": 1.2857142857142858,
+      "largest_random_fraction_of_optimum": 0.8296821443346162
+    },
+    {
+      "Gamma_over_gamma": 3,
+      "CTMCs_checked": 330,
+      "optimal_ladder_stages": 3,
+      "optimal_precision": 1.766451612903225,
+      "largest_random_fraction_of_optimum": 0.6382267048547767
+    },
+    {
+      "Gamma_over_gamma": 10,
+      "CTMCs_checked": 330,
+      "optimal_ladder_stages": 6,
+      "optimal_precision": 2.892415007033112,
+      "largest_random_fraction_of_optimum": 0.45562429378263675
+    },
+    {
+      "Gamma_over_gamma": 100,
+      "CTMCs_checked": 330,
+      "optimal_ladder_stages": 17,
+      "optimal_precision": 8.709223885996844,
+      "largest_random_fraction_of_optimum": 0.17245777260864187
+    },
+    {
+      "Gamma_over_gamma": 1000,
+      "CTMCs_checked": 330,
+      "optimal_ladder_stages": 55,
+      "optimal_precision": 27.402130562903668,
+      "largest_random_fraction_of_optimum": 0.05735223495201753
+    }
+  ],
+  "largest_relative_generator_vs_transform_moment_error": 1.1915202158263583e-10,
+  "adjacent_ladder_saturation_cases": 80,
+  "strict_nonadjacent_mixture_cases": 12,
+  "defective_nominal_clock": {
+    "nominal_nonticking_probability": 0.5,
+    "restart_mean": 6.999999999999999,
+    "restart_variance": 98.99999999999999,
+    "restart_precision": 0.49494949494949486,
+    "Laplace_probability": 0.4166666666666667
+  },
+  "wide_optimizer_scans": [
+    {
+      "Gamma_over_gamma": 0.001,
+      "optimal_stages": 2,
+      "continuous_optimum_stages": 1.144902968642526,
+      "scan_through_stages": 80,
+      "optimal_precision": 1.0000019920279046
+    },
+    {
+      "Gamma_over_gamma": 0.03,
+      "optimal_stages": 2,
+      "continuous_optimum_stages": 1.2851938281731647,
+      "scan_through_stages": 80,
+      "optimal_precision": 1.0016045640934215
+    },
+    {
+      "Gamma_over_gamma": 0.3,
+      "optimal_stages": 2,
+      "continuous_optimum_stages": 1.664290806187971,
+      "scan_through_stages": 80,
+      "optimal_precision": 1.07563025210084
+    },
+    {
+      "Gamma_over_gamma": 1,
+      "optimal_stages": 2,
+      "continuous_optimum_stages": 2.239328147083572,
+      "scan_through_stages": 80,
+      "optimal_precision": 1.2857142857142858
+    },
+    {
+      "Gamma_over_gamma": 3,
+      "optimal_stages": 3,
+      "continuous_optimum_stages": 3.3307081604401874,
+      "scan_through_stages": 80,
+      "optimal_precision": 1.766451612903225
+    },
+    {
+      "Gamma_over_gamma": 10,
+      "optimal_stages": 6,
+      "continuous_optimum_stages": 5.6684505153782725,
+      "scan_through_stages": 80,
+      "optimal_precision": 2.892415007033112
+    },
+    {
+      "Gamma_over_gamma": 100,
+      "optimal_stages": 17,
+      "continuous_optimum_stages": 17.38240640364124,
+      "scan_through_stages": 120,
+      "optimal_precision": 8.709223885996844
+    },
+    {
+      "Gamma_over_gamma": 1000,
+      "optimal_stages": 55,
+      "continuous_optimum_stages": 54.79187717519348,
+      "scan_through_stages": 380,
+      "optimal_precision": 27.402130562903668
+    },
+    {
+      "Gamma_over_gamma": 10000,
+      "optimal_stages": 173,
+      "continuous_optimum_stages": 173.2112871045924,
+      "scan_through_stages": 1200,
+      "optimal_precision": 86.60759972731199
+    }
+  ],
+  "weak_error_asymptotics": [
+    {
+      "Gamma_over_gamma": 100.0,
+      "optimal_stages": 17,
+      "stages_over_sqrt_3R": 0.9814954576223637,
+      "precision_over_sqrt_3R_half": 1.0056545510025992
+    },
+    {
+      "Gamma_over_gamma": 1000.0,
+      "optimal_stages": 55,
+      "stages_over_sqrt_3R": 1.0041580220928046,
+      "precision_over_sqrt_3R_half": 1.0005843355336048
+    },
+    {
+      "Gamma_over_gamma": 10000.0,
+      "optimal_stages": 173,
+      "stages_over_sqrt_3R": 0.9988159656980526,
+      "precision_over_sqrt_3R_half": 1.0000584203286187
+    },
+    {
+      "Gamma_over_gamma": 1000000.0,
+      "optimal_stages": 1732,
+      "stages_over_sqrt_3R": 0.9999706662364319,
+      "precision_over_sqrt_3R_half": 1.0000005912257006
+    },
+    {
+      "Gamma_over_gamma": 100000000.0,
+      "optimal_stages": 17321,
+      "stages_over_sqrt_3R": 1.0000284012633507,
+      "precision_over_sqrt_3R_half": 1.000000005513464
+    },
+    {
+      "Gamma_over_gamma": 10000000000.0,
+      "optimal_stages": 173205,
+      "stages_over_sqrt_3R": 0.9999995337498913,
+      "precision_over_sqrt_3R_half": 1.0000000000590583
+    }
+  ],
+  "scope": "Finite numerical checks; universal claims rely on the analytical proof."
+}
