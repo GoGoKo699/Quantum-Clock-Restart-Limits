@@ -8,15 +8,15 @@ The source is the quasiideal reset clock of [Woods, Silva, Pütz, Stupar and Ren
 
 ## 1. The clean-clock resource lemma
 
-Fix a strength $`\Gamma>0`$. For every fixed $`\epsilon\in(0,1)`$, there is a family of finite-dimensional, time-independent quantum reset clocks, indexed by sufficiently large even dimensions $`d`$, with
+Fix a strength $`\Gamma\gt 0`$. For every fixed $`\epsilon\in(0,1)`$, there is a family of finite-dimensional, time-independent quantum reset clocks, indexed by sufficiently large even dimensions $`d`$, with
 
 ```math
 \begin{aligned}
-\min_{c\in\mathbb R}\|H_d-cI\|&<\frac{\Gamma}{4},\\
+\min_{c\in\mathbb R}\|H_d-cI\|&\lt \frac{\Gamma}{4},\\
 Q_d:=\sum_k J_{d,k}^{\dagger}J_{d,k}&\leq\Gamma I,\\
 \frac{2\pi}{3}\frac d\Gamma
 \leq\mu_{0,d}&\leq8\pi\frac d\Gamma,\\
-c_{0,d}:=\frac{\operatorname{Var}X_d}{\mu_{0,d}^{2}}
+c_{0,d}:=\frac{\mathrm{Var}X_d}{\mu_{0,d}^{2}}
 &\leq24d^{-2+\epsilon}.
 \end{aligned}
 ```
@@ -82,20 +82,21 @@ The symbols $`\epsilon_5,\ldots,\epsilon_9`$ are the source's proof parameters. 
 These choices meet all constraints in the source's Eqs. (589)–(590). In particular,
 
 ```math
-\begin{gathered}
-0<\epsilon_5<\epsilon_6<1,
-\qquad
-\epsilon_5+\epsilon_8<\epsilon_7<\frac a2,
-\qquad
-0<\epsilon_9<a,\\
-3-4\epsilon_5-\epsilon_9>0,
-\qquad
-\frac4\sigma<d^{a/2}\leq\frac d\sigma
-\quad\text{for sufficiently large }d.
-\end{gathered}
+\begin{aligned}
+0&\lt \epsilon_5\lt \epsilon_6\lt 1,\\
+\epsilon_5+\epsilon_8&\lt \epsilon_7\lt \frac{a}{2},\\
+0&\lt \epsilon_9\lt a,\\
+3-4\epsilon_5-\epsilon_9&\gt 0.
+\end{aligned}
 ```
 
-The last upper inequality reduces to $`5a/2\leq1`$, which holds because $`a<1/5`$. This explicit choice uses the source's accuracy bound before its final renaming of the parameter $`\eta`$.
+For sufficiently large dimensions, the remaining constraint is
+
+```math
+\frac{4}{\sigma}\lt d^{a/2}\leq\frac{d}{\sigma}.
+```
+
+The last upper inequality reduces to $`5a/2\leq1`$, which holds because $`a\lt 1/5`$. This explicit choice uses the source's accuracy bound before its final renaming of the parameter $`\eta`$.
 
 ### Initial state
 
@@ -117,9 +118,9 @@ Here $`\mathcal S_d(0)`$ is the set of the $`d`$ nearest integers specified by t
 Define
 
 ```math
-I_N=\int_{\mathbb R}\operatorname{sinc}^{2N}(x)\,dx,
+I_N=\int_{\mathbb R}\mathrm{sinc}^{2N}(x)\,dx,
 \qquad
-\operatorname{sinc}(x)=\frac{\sin(\pi x)}{\pi x},
+\mathrm{sinc}(x)=\frac{\sin(\pi x)}{\pi x},
 \qquad
 C_0=1+2\pi N+\frac{2N+1}{I_N}.
 ```
@@ -153,7 +154,7 @@ B_d&=\frac{1-2\pi/(\delta d^2)}{I_N},\\
 \bar V_{0,d}(x)
 &=\frac1{\delta d^2}
 +\nu_d B_d\sum_{p\in\mathbb Z}
-\operatorname{sinc}^{2N}\!\bigl(\nu_d(x-x_0-2\pi p)\bigr).
+\mathrm{sinc}^{2N}\!\bigl(\nu_d(x-x_0-2\pi p)\bigr).
 \end{aligned}
 ```
 
@@ -180,7 +181,7 @@ The complete fixed-period generator is
 +\sum_{k=0}^{d-1}\mathcal D[J_{d,k}^{(0)}](\rho).
 ```
 
-Each jump output is proportional to $`\rho_{0,d}`$. The no-tick amplitude generator is $`-iH_d^{(0)}-V_d^{(0)}`$, and the first-tick density is $`2\operatorname{tr}(V_d^{(0)}\rho(t))`$, as in the source's Eqs. (346)–(351).
+Each jump output is proportional to $`\rho_{0,d}`$. The no-tick amplitude generator is $`-iH_d^{(0)}-V_d^{(0)}`$, and the first-tick density is $`2\mathrm{tr}(V_d^{(0)}\rho(t))`$, as in the source's Eqs. (346)–(351).
 
 ## 3. Bounding the sum of all tick effects
 
@@ -198,7 +199,7 @@ The source's derivative estimate, Lemma 28/Eq. (530), implies
 \max_x\bar V_{0,d}(x)\leq\nu_d C_0.
 ```
 
-The displayed choice of $`C_0`$ is one explicit admissible constant. To check it, the Fourier transform of $`\operatorname{sinc}^{2N}`$ is an $`N`$-fold convolution of the triangular density. It is nonnegative, supported on $`[-N,N]`$ and has supremum at most one. The nonconstant Fourier coefficients of the periodic potential are therefore supported on $`|\ell|\leq2\pi\nu_dN`$. Summing their absolute values, including the constant baseline separately, bounds the zeroth derivative by
+The displayed choice of $`C_0`$ is one explicit admissible constant. To check it, the Fourier transform of $`\mathrm{sinc}^{2N}`$ is an $`N`$-fold convolution of the triangular density. It is nonnegative, supported on $`[-N,N]`$ and has supremum at most one. The nonconstant Fourier coefficients of the periodic potential are therefore supported on $`|\ell|\leq2\pi\nu_dN`$. Summing their absolute values, including the constant baseline separately, bounds the zeroth derivative by
 
 ```math
 \nu_d\left(1+\frac{2N+1}{I_N}\right).
@@ -230,7 +231,7 @@ The physical period is now $`T_d=4\pi d/\Gamma`$. Uniform rescaling preserves pr
 
 ```math
 \min_c\|H_d-cI\|
-=\lambda_d\pi(d-1)<\frac\Gamma4.
+=\lambda_d\pi(d-1)\lt \frac\Gamma4.
 ```
 
 For the total tick effect,
@@ -301,9 +302,9 @@ For large $`d`$, if $`X_d^{(0)}`$ denotes the source tick time, they imply
 The first inequality gives $`\mathbb E X_d^{(0)}\geq1/6`$. If its mean were greater than two, the second inequality would imply
 
 ```math
-\operatorname{Var}X_d^{(0)}
+\mathrm{Var}X_d^{(0)}
 \geq\frac12\bigl(\mathbb E X_d^{(0)}-1\bigr)^2
->\frac18\bigl(\mathbb E X_d^{(0)}\bigr)^2.
+\gt \frac18\bigl(\mathbb E X_d^{(0)}\bigr)^2.
 ```
 
 Its precision would then be below eight, contradicting the diverging lower bound already established. Thus the actual mean lies in $`[1/6,2]`$ eventually. Rescaling proves
@@ -328,7 +329,7 @@ Their combined generator and total effect are
 ```math
 \begin{aligned}
 \sum_\ell\mathcal D[F_{d,\ell}](\rho)
-&=\gamma\bigl(\rho_{0,d}\operatorname{tr}\rho-\rho\bigr),\\
+&=\gamma\bigl(\rho_{0,d}\mathrm{tr}\rho-\rho\bigr),\\
 \sum_\ell F_{d,\ell}^{\dagger}F_{d,\ell}&=\gamma I.
 \end{aligned}
 ```
@@ -342,7 +343,7 @@ Both the clean and faulty generators are time independent. This construction nee
 The [second-moment restart estimate](restart_and_hazard.md) applies whenever $`c_{0,d}\leq1`$ and $`\gamma\mu_{0,d}\leq1/4`$:
 
 ```math
-\frac{\operatorname{Var}T_d^{\mathrm{fault}}}
+\frac{\mathrm{Var}T_d^{\mathrm{fault}}}
 {(\mathbb E T_d^{\mathrm{fault}})^2}
 \leq c_{0,d}+40\gamma\mu_{0,d}.
 ```
@@ -350,7 +351,7 @@ The [second-moment restart estimate](restart_and_hazard.md) applies whenever $`c
 Using the resource lemma and $`R=\Gamma/\gamma`$ gives
 
 ```math
-\frac{\operatorname{Var}T_d^{\mathrm{fault}}}
+\frac{\mathrm{Var}T_d^{\mathrm{fault}}}
 {(\mathbb E T_d^{\mathrm{fault}})^2}
 \leq24d^{-2+\epsilon}+320\pi\frac dR.
 ```
@@ -375,6 +376,6 @@ The positive constant $`c_\epsilon`$ and the onset of this bound may depend on $
 }
 ```
 
-The order of the argument matters: fix $`\epsilon>0`$, take the small-fault limit with the specified dimension choice, and then let the fixed exponent loss approach zero. This establishes the optimal logarithmic exponent. It leaves subpower factors and the exact asymptotic constant unresolved, and does not assert $`\mathcal P_{\mathrm q}^{\star}(R)=\Theta(R^{2/3})`$.
+The order of the argument matters: fix $`\epsilon\gt 0`$, take the small-fault limit with the specified dimension choice, and then let the fixed exponent loss approach zero. This establishes the optimal logarithmic exponent. It leaves subpower factors and the exact asymptotic constant unresolved, and does not assert $`\mathcal P_{\mathrm q}^{\star}(R)=\Theta(R^{2/3})`$.
 
 The [classical optimum](classical_optimum.md) is $`\Theta(R^{1/2})`$ under the same intrinsic rate scale and complete-restart faults. Quantum coherence therefore changes the optimal dependence on fault strength in this model. The inherited clean-clock advantage supplies the construction; the restart theorem and resource transfer establish how that advantage survives the specified faults.

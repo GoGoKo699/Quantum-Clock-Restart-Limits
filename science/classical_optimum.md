@@ -19,7 +19,7 @@ A tick restores $`\alpha`$. An independent Poisson process of rate $`\gamma`$ al
 The performance measure is the renewal precision
 
 ```math
-\mathcal P=\frac{\mathbb E[T]^2}{\operatorname{Var}T}.
+\mathcal P=\frac{\mathbb E[T]^2}{\mathrm{Var}T}.
 ```
 
 Write
@@ -61,7 +61,7 @@ Let $`X`$ be the first nominal tick time, with $`X=\infty`$ on a trajectory that
 \phi(s)=\mathbb E[e^{-sX}],\qquad s>0,
 ```
 
-where $`e^{-s\infty}=0`$. If $`R`$ is an independent exponential error time of rate $`\gamma`$, the first attempt either ticks at $`X<R`$ or restarts at $`R<X`$. This renewal decomposition gives
+where $`e^{-s\infty}=0`$. If $`R`$ is an independent exponential error time of rate $`\gamma`$, the first attempt either ticks at $`X\lt R`$ or restarts at $`R\lt X`$. This renewal decomposition gives
 
 ```math
 \mathbb E[e^{-sT}]
@@ -103,11 +103,11 @@ The mean and squared coefficient of variation become
 
 ```math
 \mu=\frac{1-p}{\gamma p},\qquad
-\operatorname{CV}(T)^2
+\mathrm{CV}(T)^2
 =\frac{1-p^2-2bh}{(1-p)^2}.
 ```
 
-In particular $`0<p\leq q`$, so an attainable observed mean must satisfy $`\mu\geq\Gamma^{-1}`$. No assumption on reversibility, detailed balance or the number of states entered this reduction.
+In particular $`0\lt p\leq q`$, so an attainable observed mean must satisfy $`\mu\geq\Gamma^{-1}`$. No assumption on reversibility, detailed balance or the number of states entered this reduction.
 
 ## The exact frontier at a fixed observed mean
 
@@ -235,7 +235,7 @@ gives $`\mathcal P_{\rm C}^{*}\sim\sqrt{3/a}/2`$. Integer rounding changes $`z`$
 Dropping the discrete grid and applying Jensen directly to $`g`$ yields the convenient smooth relaxation
 
 ```math
-\operatorname{CV}(T)^2
+\mathrm{CV}(T)^2
 \geq\frac{1-p^2+2c\,p\log p}{(1-p)^2}.
 ```
 

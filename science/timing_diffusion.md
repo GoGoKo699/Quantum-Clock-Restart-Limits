@@ -7,10 +7,12 @@ Higher tick regularity can be obtained by increasing the mean tick period, so pr
 Let $`T_1,T_2,\ldots`$ be the actual iid intertick times, including all fault delays, with mean $`\mu`$ and variance $`\sigma^2`$. Define
 
 ```math
-S_n=\sum_{j=1}^nT_j,\qquad
-N(t)=\max\{n:S_n\le t\},\qquad
-\widehat t=\mu N(t).
-\tag{T1}
+\begin{aligned}
+S_n&=\sum_{j=1}^nT_j,\\
+N(t)&=\max\{n:S_n\le t\},\\
+\widehat t&=\mu N(t).
+\qquad\text{(T1)}
+\end{aligned}
 ```
 
 The mean period is calibrated before operation. During operation the output is the designated tick count; a list of precisely timestamped events would instead supply an external clock. No reset times or hidden internal transitions are made available to the estimator.
@@ -18,14 +20,16 @@ The mean period is calibrated before operation. During operation the output is t
 **Theorem T1 — asymptotic timing diffusion.** For each fixed admissible clock,
 
 ```math
+\begin{aligned}
 \lim_{t\to\infty}
-\frac{\operatorname{Var}(\widehat t)}t
-=\lim_{t\to\infty}
-\frac{\mathbb E[(\widehat t-t)^2]}t
-=\frac{\sigma^2}{\mu}
+\frac{\mathrm{Var}(\widehat t)}t
+&=\lim_{t\to\infty}
+\frac{\mathbb E[(\widehat t-t)^2]}t\\
+&=\frac{\sigma^2}{\mu}
 =\frac{\mu}{P}
 =:\mathcal D.
-\tag{T2}
+\qquad\text{(T2)}
+\end{aligned}
 ```
 
 The dimensions of $`\mathcal D`$ are time. A smaller value means a smaller long-time squared error per unit elapsed time. In particular, $`1/P`$ is the count Fano factor, whereas $`\mathcal D=\mu/P`$ also charges the clock's period.
@@ -33,11 +37,12 @@ The dimensions of $`\mathcal D`$ are time. A smaller value means a smaller long-
 **Proof.** The exponential-tail argument in [restart and hazard](restart_and_hazard.md#notation-and-regularity) gives finite moments of every actual interval. Let $`\nu=N(t)+1`$ and let $`B_t=S_\nu-t`$ be the forward overshoot. Set $`M_n=S_n-n\mu`$. Wald's identities give
 
 ```math
-\mathbb E M_\nu=0,\qquad
-\mathbb E M_\nu^2=\sigma^2\mathbb E\nu,
-\qquad
-\mu N(t)-t=B_t-\mu-M_\nu.
-\tag{T3}
+\begin{aligned}
+\mathbb E M_\nu&=0,\\
+\mathbb E M_\nu^2&=\sigma^2\mathbb E\nu,\\
+\mu N(t)-t&=B_t-\mu-M_\nu.
+\qquad\text{(T3)}
+\end{aligned}
 ```
 
 The stopping time has finite expectation because the actual tick intensity is at most $`\Gamma`$, so $`\mathbb E N(t)\le\Gamma t`$.
@@ -45,12 +50,14 @@ The stopping time has finite expectation because the actual tick intensity is at
 For completeness, the overshoot has a uniformly bounded second moment. The renewal measure is an atom at zero plus a density at most $`\Gamma`$, again by the conditional tick-intensity bound. Summing over the possible last renewal gives
 
 ```math
+\begin{aligned}
 \mathbb E B_t^2
-\le\mathbb E T^2
+&\le\mathbb E T^2
 +\Gamma\int_0^\infty
-\mathbb E[(T-u)^2\mathbf1_{T>u}]\,du
-=\mathbb E T^2+\frac\Gamma3\mathbb E T^3.
-\tag{T4}
+\mathbb E[(T-u)^2\mathbf1_{T>u}]\,du\\
+&=\mathbb E T^2+\frac\Gamma3\mathbb E T^3.
+\qquad\text{(T4)}
+\end{aligned}
 ```
 
 The right side is finite and independent of $`t`$ for this fixed clock. From $`S_\nu=t+B_t`$ and Wald's mean identity,
@@ -69,8 +76,10 @@ This is the usual renewal-clock diffusion relation. It is not a claim that one-i
 The [fixed-mean hazard theorem](restart_and_hazard.md#sharp-envelope-at-a-fixed-actual-mean) immediately implies
 
 ```math
-\mathcal D\ge\frac{x}{\gamma}G_r(x),\qquad x\ge r.
-\tag{T5}
+\begin{aligned}
+\mathcal D&\ge\frac{x}{\gamma}G_r(x),\qquad x\ge r.
+\qquad\text{(T5)}
+\end{aligned}
 ```
 
 This relaxed timing optimum can also be calculated exactly. Put
@@ -83,49 +92,55 @@ k(x)=\ln(1+x)-x+\frac{x^2}{2}.
 Since $`k'(x)=x^2/(1+x)>0`$, the equation $`k(x_D)=K(r)`$ has a unique positive solution. Differentiating $`J_r(x)=xG_r(x)`$ gives
 
 ```math
-J_r'(x)=\frac2{x^2}[k(x)-K(r)].
-\tag{T6}
+\begin{aligned}
+J_r'(x)&=\frac2{x^2}[k(x)-K(r)].
+\qquad\text{(T6)}
+\end{aligned}
 ```
 
-For $`0<r<1`$,
+For $`0\lt r\lt 1`$,
 
 ```math
 K(r)-k(r)=\frac{r^2(1-r)}{2(1+r)}>0,
 ```
 
-so $`x_D>r`$ is the unique admissible minimum. At this point $`J_r(x_D)=x_D^2`$. For $`r\ge1`$, the unconstrained root is at or below $`r`$, so the minimum over $`x\ge r`$ is instead the boundary $`x=r`$. Consequently
+so $`x_D>r`$ is the unique admissible minimum. At this point $`J_r(x_D)=x_D^2`$. For $`r\ge1`$, the unconstrained root is at or below $`r`$, so the minimum over $`x\ge r`$ is instead the boundary $`x=r`$. Consequently, with $`k(x_D)=K(r)`$ on the first branch,
 
 ```math
 \mathcal D_{\rm hazard}(r)
 =\begin{cases}
-x_D^2/\gamma,&0<r<1,\quad k(x_D)=K(r),\\
+x_D^2/\gamma,&0\lt r\lt 1,\\
 1/\Gamma,&r\ge1.
 \end{cases}
-\tag{T7}
+\qquad\text{(T7)}
 ```
 
-The delayed-exponential distribution in the hazard theorem attains this relaxed optimum. Its deterministic-delay branch is an upper envelope on clock performance, not an asserted finite-quantum construction. For $`r\ge1`$, however, the boundary distribution is simply $`\operatorname{Exp}(\Gamma)`$, realized by a one-state Poisson tick clock. Thus the quantum and classical timing optima both equal $`1/\Gamma`$ exactly when $`\gamma\ge\Gamma`$. This statement concerns timing diffusion, not tick precision.
+The delayed-exponential distribution in the hazard theorem attains this relaxed optimum. Its deterministic-delay branch is an upper envelope on clock performance, not an asserted finite-quantum construction. For $`r\ge1`$, however, the boundary distribution is simply $`\mathrm{Exp}(\Gamma)`$, realized by a one-state Poisson tick clock. Thus the quantum and classical timing optima both equal $`1/\Gamma`$ exactly when $`\gamma\ge\Gamma`$. This statement concerns timing diffusion, not tick precision.
 
 As $`r\downarrow0`$, $`k(x)=x^3/3+O(x^4)`$ and $`K(r)=r^2/2+O(r^3)`$. Hence
 
 ```math
-x_D\sim(3/2)^{1/3}r^{2/3},\qquad
+\begin{aligned}
+x_D&\sim(3/2)^{1/3}r^{2/3},\\
 \mathcal D_{\rm hazard}(r)
-\sim(3/2)^{2/3}\Gamma^{-1}R^{-1/3}.
-\tag{T8}
+&\sim(3/2)^{2/3}\Gamma^{-1}R^{-1/3}.
+\qquad\text{(T8)}
+\end{aligned}
 ```
 
 The timing optimizer differs from the precision optimizer $`x_P\sim6^{1/3}r^{2/3}`$. Maximizing $`P`$ and minimizing $`\mathcal D`$ are different tasks, even though their optimal periods have the same power of $`R`$.
 
 ## Quantum timing exponent under the full strength budget
 
-Fix $`\Gamma>0`$ and write $`\mathcal D_Q^*(R)`$ for the infimum of (T2) over the finite autonomous quantum clock class in the [model](model.md), with $`\gamma=\Gamma/R`$. Both the centered Hamiltonian norm and the total intrinsic jump effect obey that model's global strength bounds. The [quasiideal source transfer](quantum_construction.md) supplies, for every fixed $`0<\epsilon<1`$ and all sufficiently large dimensions $`d`$,
+Fix $`\Gamma>0`$ and write $`\mathcal D_Q^*(R)`$ for the infimum of (T2) over the finite autonomous quantum clock class in the [model](model.md), with $`\gamma=\Gamma/R`$. Both the centered Hamiltonian norm and the total intrinsic jump effect obey that model's global strength bounds. The [quasiideal source transfer](quantum_construction.md) supplies, for every fixed $`0\lt\epsilon\lt 1`$ and all sufficiently large dimensions $`d`$,
 
 ```math
-\mu_0=\Theta_\epsilon(d/\Gamma),\qquad
-c_0=\frac{\operatorname{Var}X}{\mu_0^2}
+\begin{aligned}
+\mu_0&=\Theta_\epsilon(d/\Gamma),\\
+c_0&=\frac{\mathrm{Var}X}{\mu_0^2}
 \le C_\epsilon d^{-2+\epsilon}.
-\tag{T9}
+\qquad\text{(T9)}
+\end{aligned}
 ```
 
 The constants and dimension threshold may depend on $`\epsilon`$. They do not depend on $`R`$ once $`\epsilon`$ is fixed. This is an inherited clean-clock construction whose strength and mean bounds must both be retained; a dimension-only precision claim would not suffice.
@@ -133,30 +148,36 @@ The constants and dimension threshold may depend on $`\epsilon`$. They do not de
 For $`z=\gamma\mu_0\to0`$, the second-moment transfer and mean control give
 
 ```math
+\begin{aligned}
 \mathcal D
-=\mu\,\operatorname{CV}(T)^2
-\le\frac{\mu_0}{1-z}(c_0+40z)
-\le\frac{C_\epsilon'}\Gamma
+&=\mu\,\mathrm{CV}(T)^2\\
+&\le\frac{\mu_0}{1-z}(c_0+40z)\\
+&\le\frac{C_\epsilon'}\Gamma
 \left[d^{-1+\epsilon}+\frac{d^2}{R}\right].
-\tag{T10}
+\qquad\text{(T10)}
+\end{aligned}
 ```
 
 Choose an integer $`d`$ of order $`R^{1/(3-\epsilon)}`$. Then $`z\to0`$ and
 
 ```math
+\begin{aligned}
 \mathcal D_Q^*(R)
-\le\frac{C_\epsilon''}\Gamma
+&\le\frac{C_\epsilon''}\Gamma
 R^{-(1-\epsilon)/(3-\epsilon)}.
-\tag{T11}
+\qquad\text{(T11)}
+\end{aligned}
 ```
 
 The universal relaxed bound (T8) gives the matching lower exponent. Thus
 
 ```math
+\begin{aligned}
 \lim_{R\to\infty}
 \frac{\ln[\Gamma\mathcal D_Q^*(R)]}{\ln R}
-=-\frac13.
-\tag{T12}
+&=-\frac13.
+\qquad\text{(T12)}
+\end{aligned}
 ```
 
 Equivalently, $`\Gamma\mathcal D_Q^*(R)=R^{-1/3+o(1)}`$ in this logarithmic sense. The results do not establish an exact $`\Theta(R^{-1/3})`$ law or the relaxed constant in (T8) for finite quantum clocks.
@@ -169,26 +190,29 @@ After the reset faults are added, total escape, including a virtual reset that l
 
 ```math
 T=\sum_{j=1}^{K}E_j,\qquad
-E_j\stackrel{\rm iid}{\sim}\operatorname{Exp}(\Gamma+\gamma),
+E_j\stackrel{\rm iid}{\sim}\mathrm{Exp}(\Gamma+\gamma),
 ```
 
 where the absorption step $`K`$ of the embedded discrete chain is independent of those exponential holding times. Therefore
 
 ```math
-\mu=\frac{\mathbb EK}{\Gamma+\gamma},\qquad
-\sigma^2=\frac{\mathbb EK+\operatorname{Var}K}{(\Gamma+\gamma)^2},\qquad
-\mathcal D_C\ge\frac1{\Gamma+\gamma}.
-\tag{T13}
+\begin{aligned}
+\mu&=\frac{\mathbb EK}{\Gamma+\gamma},\\
+\sigma^2&=\frac{\mathbb EK+\mathrm{Var}K}{(\Gamma+\gamma)^2},\\
+\mathcal D_C&\ge\frac1{\Gamma+\gamma}.
+\qquad\text{(T13)}
+\end{aligned}
 ```
 
 A single memoryless tick transition of rate $`\Gamma`$, resetting to its only clock state, is unchanged by whole-clock faults. It attains $`\mathcal D_C=1/\Gamma`$. Hence
 
 ```math
+\begin{aligned}
 \frac1{\Gamma+\gamma}
-\le\mathcal D_C^*(R)\le\frac1\Gamma,
-\qquad
-\lim_{R\to\infty}\Gamma\mathcal D_C^*(R)=1.
-\tag{T14}
+&\le\mathcal D_C^*(R)\le\frac1\Gamma,\\
+\lim_{R\to\infty}\Gamma\mathcal D_C^*(R)&=1.
+\qquad\text{(T14)}
+\end{aligned}
 ```
 
 This timing claim does not require an unproved exact all-$`R`$ optimum $`1/\Gamma`$. The sharper [classical precision frontier](classical_optimum.md) addresses a different optimization and shows its optimal stage count and square-root regularity law.
@@ -196,10 +220,12 @@ This timing claim does not require an unproved exact all-$`R`$ optimum $`1/\Gamm
 Combining (T12) and (T14),
 
 ```math
+\begin{aligned}
 \lim_{R\to\infty}
 \frac{\ln[\mathcal D_C^*(R)/\mathcal D_Q^*(R)]}{\ln R}
-=\frac13.
-\tag{T15}
+&=\frac13.
+\qquad\text{(T15)}
+\end{aligned}
 ```
 
 The quantum improvement therefore persists when every waiting interval is charged. Its source is a smaller timing diffusion at the matched native strength and imposed complete-reset rate.

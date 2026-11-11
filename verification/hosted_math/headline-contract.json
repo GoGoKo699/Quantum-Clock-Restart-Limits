@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 3,
+      "source_sha256": "6a779d30830a1eff6d1164a19584fb526def273dd79602bd8d42bf71eac04d2a",
+      "expected_text": "R = Γ / γ , P = ( E T ) 2 Var T ,"
+    },
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "ff4c723ed5f0611acf704bdf18f6419c8c785a0d739903eefb8dc56a284d7b96",
+      "expected_text": "P C ∗ ( R ) ∼ 3 R / 2"
+    },
+    {
+      "path": "README.md",
+      "index": 7,
+      "source_sha256": "3c5cf59f14bfc64f7b377fe46fcb51936e9340867cdb3aaf867e89a5c52726ed",
+      "expected_text": "P Q ∗ ( R ) = R 2 / 3 + o ( 1 )"
+    },
+    {
+      "path": "README.md",
+      "index": 8,
+      "source_sha256": "68725cf8a5c636abc1c57019a58dd953b22aab0efb1bb5d7e008ac8275c8b23a",
+      "expected_text": "Γ D Q ∗ = R − 1 / 3 + o ( 1 )"
+    },
+    {
+      "path": "README.md",
+      "index": 9,
+      "source_sha256": "3439f012b20fd11d39bb77975ce3cebb06227ced2bb5f326017f099e734f7c72",
+      "expected_text": "Γ D C ∗ → 1"
+    },
+    {
+      "path": "README.md",
+      "index": 12,
+      "source_sha256": "0189d20e175aedda29f502aee8c3c3368278783c2b8aecf0d1ba4df79f8b4a44",
+      "expected_text": "t ^ = μ N ( t ) , D = lim t → ∞ E [ ( t ^ − t ) 2 ] t = Var T μ , μ = E T ."
+    }
+  ]
+}
