@@ -8,11 +8,11 @@ The source is the quasiideal reset clock of [Woods, Silva, Pütz, Stupar and Ren
 
 ## 1. The clean-clock resource lemma
 
-Fix a strength $`\Gamma>0`$. For every fixed $`\epsilon\in(0,1)`$, there is a family of finite-dimensional, time-independent quantum reset clocks, indexed by sufficiently large even dimensions $`d`$, with
+Fix a strength $`\Gamma\gt 0`$. For every fixed $`\epsilon\in(0,1)`$, there is a family of finite-dimensional, time-independent quantum reset clocks, indexed by sufficiently large even dimensions $`d`$, with
 
 ```math
 \begin{aligned}
-\min_{c\in\mathbb R}\|H_d-cI\|&<\frac{\Gamma}{4},\\
+\min_{c\in\mathbb R}\|H_d-cI\|&\lt \frac{\Gamma}{4},\\
 Q_d:=\sum_k J_{d,k}^{\dagger}J_{d,k}&\leq\Gamma I,\\
 \frac{2\pi}{3}\frac d\Gamma
 \leq\mu_{0,d}&\leq8\pi\frac d\Gamma,\\
@@ -83,20 +83,20 @@ These choices meet all constraints in the source's Eqs. (589)–(590). In partic
 
 ```math
 \begin{aligned}
-0&<\epsilon_5<\epsilon_6<1,\\
-\epsilon_5+\epsilon_8&<\epsilon_7<\frac{a}{2},\\
-0&<\epsilon_9<a,\\
-3-4\epsilon_5-\epsilon_9&>0.
+0&\lt \epsilon_5\lt \epsilon_6\lt 1,\\
+\epsilon_5+\epsilon_8&\lt \epsilon_7\lt \frac{a}{2},\\
+0&\lt \epsilon_9\lt a,\\
+3-4\epsilon_5-\epsilon_9&\gt 0.
 \end{aligned}
 ```
 
 For sufficiently large dimensions, the remaining constraint is
 
 ```math
-\frac{4}{\sigma}<d^{a/2}\leq\frac{d}{\sigma}.
+\frac{4}{\sigma}\lt d^{a/2}\leq\frac{d}{\sigma}.
 ```
 
-The last upper inequality reduces to $`5a/2\leq1`$, which holds because $`a<1/5`$. This explicit choice uses the source's accuracy bound before its final renaming of the parameter $`\eta`$.
+The last upper inequality reduces to $`5a/2\leq1`$, which holds because $`a\lt 1/5`$. This explicit choice uses the source's accuracy bound before its final renaming of the parameter $`\eta`$.
 
 ### Initial state
 
@@ -231,7 +231,7 @@ The physical period is now $`T_d=4\pi d/\Gamma`$. Uniform rescaling preserves pr
 
 ```math
 \min_c\|H_d-cI\|
-=\lambda_d\pi(d-1)<\frac\Gamma4.
+=\lambda_d\pi(d-1)\lt \frac\Gamma4.
 ```
 
 For the total tick effect,
@@ -304,7 +304,7 @@ The first inequality gives $`\mathbb E X_d^{(0)}\geq1/6`$. If its mean were grea
 ```math
 \mathrm{Var}X_d^{(0)}
 \geq\frac12\bigl(\mathbb E X_d^{(0)}-1\bigr)^2
->\frac18\bigl(\mathbb E X_d^{(0)}\bigr)^2.
+\gt \frac18\bigl(\mathbb E X_d^{(0)}\bigr)^2.
 ```
 
 Its precision would then be below eight, contradicting the diverging lower bound already established. Thus the actual mean lies in $`[1/6,2]`$ eventually. Rescaling proves
@@ -376,6 +376,6 @@ The positive constant $`c_\epsilon`$ and the onset of this bound may depend on $
 }
 ```
 
-The order of the argument matters: fix $`\epsilon>0`$, take the small-fault limit with the specified dimension choice, and then let the fixed exponent loss approach zero. This establishes the optimal logarithmic exponent. It leaves subpower factors and the exact asymptotic constant unresolved, and does not assert $`\mathcal P_{\mathrm q}^{\star}(R)=\Theta(R^{2/3})`$.
+The order of the argument matters: fix $`\epsilon\gt 0`$, take the small-fault limit with the specified dimension choice, and then let the fixed exponent loss approach zero. This establishes the optimal logarithmic exponent. It leaves subpower factors and the exact asymptotic constant unresolved, and does not assert $`\mathcal P_{\mathrm q}^{\star}(R)=\Theta(R^{2/3})`$.
 
 The [classical optimum](classical_optimum.md) is $`\Theta(R^{1/2})`$ under the same intrinsic rate scale and complete-restart faults. Quantum coherence therefore changes the optimal dependence on fault strength in this model. The inherited clean-clock advantage supplies the construction; the restart theorem and resource transfer establish how that advantage survives the specified faults.
