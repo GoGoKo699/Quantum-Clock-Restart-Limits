@@ -2,7 +2,7 @@
 
 Scientific question: optimize autonomous timekeeping under hidden Poisson faults that erase the entire internal clockwork, with fixed intrinsic strength.
 
-Start with README.md and science/model.md. The exact classical weak-fault precision is asymptotic to sqrt(3Γ/γ)/2. The quantum optimum has logarithmic exponent2/3 inΓ/γ, not a proved constant-factorTheta law. For calibrated tick counts, the observation-time limit at each fixed finite clock precedes device/noise optimization.
+Start with README.md and science/model.md. The exact classical weak-fault precision is asymptotic to sqrt(3Γ/γ)/2. The quantum optimum has logarithmic exponent 2/3 in Γ/γ, not a proved constant-factor Theta law. For calibrated tick counts, the observation-time limit at each fixed finite clock precedes device/noise optimization.
 
 Question routes:
 - Learn from Wiseman and Milburn (2010) Chapters 3–4 through the supplied bridge: learning/BRIDGE.md.

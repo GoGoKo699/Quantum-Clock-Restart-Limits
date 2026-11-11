@@ -82,17 +82,18 @@ The symbols $`\epsilon_5,\ldots,\epsilon_9`$ are the source's proof parameters. 
 These choices meet all constraints in the source's Eqs. (589)–(590). In particular,
 
 ```math
-\begin{gathered}
-0<\epsilon_5<\epsilon_6<1,
-\qquad
-\epsilon_5+\epsilon_8<\epsilon_7<\frac a2,
-\qquad
-0<\epsilon_9<a,\\
-3-4\epsilon_5-\epsilon_9>0,
-\qquad
-\frac4\sigma<d^{a/2}\leq\frac d\sigma
-\quad\text{for sufficiently large }d.
-\end{gathered}
+\begin{aligned}
+0&<\epsilon_5<\epsilon_6<1,\\
+\epsilon_5+\epsilon_8&<\epsilon_7<\frac{a}{2},\\
+0&<\epsilon_9<a,\\
+3-4\epsilon_5-\epsilon_9&>0.
+\end{aligned}
+```
+
+For sufficiently large dimensions, the remaining constraint is
+
+```math
+\frac{4}{\sigma}<d^{a/2}\leq\frac{d}{\sigma}.
 ```
 
 The last upper inequality reduces to $`5a/2\leq1`$, which holds because $`a<1/5`$. This explicit choice uses the source's accuracy bound before its final renaming of the parameter $`\eta`$.

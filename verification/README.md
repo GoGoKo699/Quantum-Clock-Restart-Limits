@@ -63,7 +63,9 @@ The collector and structural checker are in `verification/hosted_math/`. With No
 ```bash
 node verification/hosted_math/capture_hosted_math.cjs \
   --root "$PWD" --repository GoGoKo699/Quantum-Clock-Restart-Limits \
-  --revision "$(git rev-parse HEAD)" --output /absolute/new-empty-capture-directory
+  --revision "$(git rev-parse HEAD)" \
+  --contract verification/hosted_math/headline-contract.json \
+  --output /absolute/new-empty-capture-directory
 ```
 
-Dependencies may be installed outside the checkout and located with `NODE_PATH`. The saved report binds the source hashes, MathML comparisons, runtime and screenshots. An automated pass checks structure and selected geometry, not scientific truth or a complete visual review. Inspect the screenshots as well. GitHub Actions artifacts expire; they are reproducible verification outputs rather than permanent scientific data.
+Dependencies may be installed outside the checkout and located with `NODE_PATH`. The saved report binds the source hashes, MathML comparisons, runtime and screenshots. The headline contract adds explicit expected text for six principal expressions; update its expression hashes after a deliberate change to those formulas. An automated pass checks structure and selected geometry, not scientific truth or a complete visual review. Inspect the screenshots as well. GitHub Actions artifacts expire; they are reproducible verification outputs rather than permanent scientific data.

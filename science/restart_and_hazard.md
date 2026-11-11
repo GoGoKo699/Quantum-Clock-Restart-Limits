@@ -36,32 +36,38 @@ F_\gamma(s)
 F_\gamma(s).
 ```
 
-The first term describes a successful attempt. The coefficient of the second term is $`\mathbb E[e^{-sE}\mathbf 1_{E<X}]`$ for $`E\sim\mathrm{Exp}(\gamma)`$, after which the completion process starts afresh. Solving yields
+The first term describes a successful attempt. The coefficient of the second term is $`\mathbb E[e^{-sE}\mathbf 1_{E\lt X}]`$ for $`E\sim\mathrm{Exp}(\gamma)`$, after which the completion process starts afresh. Solving yields
 
 ```math
+\begin{aligned}
 F_\gamma(s)
-=\frac{(s+\gamma)\phi(s+\gamma)}
+&=\frac{(s+\gamma)\phi(s+\gamma)}
        {s+\gamma\phi(s+\gamma)}.
-\tag{R1}
+\qquad\text{(R1)}
+\end{aligned}
 ```
 
 Differentiating at zero gives
 
 ```math
-\mu=\frac{1-p}{\gamma p},\qquad
+\begin{aligned}
+\mu&=\frac{1-p}{\gamma p},\\
 \mathbb E[T^2]
-=\frac{2(1-p-\gamma b)}{\gamma^2p^2},
-\tag{R2}
+&=\frac{2(1-p-\gamma b)}{\gamma^2p^2}.
+\qquad\text{(R2)}
+\end{aligned}
 ```
 
 and consequently
 
 ```math
+\begin{aligned}
 \sigma^2
-=\frac{1-p^2-2\gamma b}{\gamma^2p^2},\qquad
+&=\frac{1-p^2-2\gamma b}{\gamma^2p^2},\\
 \frac1P
-=\frac{1-p^2-2\gamma b}{(1-p)^2}.
-\tag{R3}
+&=\frac{1-p^2-2\gamma b}{(1-p)^2}.
+\qquad\text{(R3)}
+\end{aligned}
 ```
 
 In particular, fixing $`\mu`$ fixes $`p=1/(1+x)`$. At that fixed mean, minimizing the noisy variance is exactly the problem of maximizing $`b`$.
@@ -79,9 +85,11 @@ Set $`Y=e^{-\gamma X}`$, including $`Y=0`$ on noncompletion. Convexity of $`y\ln
 Substitution into (R3) yields
 
 ```math
-\frac1P\ge f(x)
-=\frac{x^2+2x-2(1+x)\ln(1+x)}{x^2}.
-\tag{R4}
+\begin{aligned}
+\frac1P&\ge f(x),\\
+f(x)&=\frac{x^2+2x-2(1+x)\ln(1+x)}{x^2}.
+\qquad\text{(R4)}
+\end{aligned}
 ```
 
 Equality holds for a deterministic intrinsic delay. This is a relaxed distributional equality condition, without a bounded-hazard requirement.
@@ -89,11 +97,12 @@ Equality holds for a deterministic intrinsic delay. This is a relaxed distributi
 The numerator $`A(x)`$ in (R4) satisfies $`A(0)=A'(0)=0`$ and $`A''(x)=2x/(1+x)`$. Therefore
 
 ```math
-A(x)=2\int_0^x\frac{(x-u)u}{1+u}\,du
-\ge\frac{x^3}{3(1+x)},
-\qquad
-f(x)\ge\frac{x}{3(1+x)}.
-\tag{R5}
+\begin{aligned}
+A(x)&=2\int_0^x\frac{(x-u)u}{1+u}\,du\\
+&\ge\frac{x^3}{3(1+x)},\\
+f(x)&\ge\frac{x}{3(1+x)}.
+\qquad\text{(R5)}
+\end{aligned}
 ```
 
 At small $`x`$, $`f(x)=x/3+O(x^2)`$; at large $`x`$, it tends to one. Even a perfectly periodic intrinsic clock therefore suffers a nonzero variance penalty from unobserved resets.
@@ -103,24 +112,28 @@ At small $`x`$, $`f(x)=x/3+O(x^2)`$; at large $`x`$, it tends to one. Even a per
 **Theorem R1 — fixed-mean hazard envelope.** Suppose the intrinsic hazard is at most $`\Gamma`$. Then $`x\ge r`$ and
 
 ```math
-\frac1P\ge G_r(x)
-=1+\frac2x
--\frac{2(1+x)}{x^2}
+\begin{aligned}
+\frac1P&\ge G_r(x),\\
+G_r(x)&=1+\frac2x\\
+&\quad-\frac{2(1+x)}{x^2}
 \left[
 \ln\!\left(\frac{1+x}{1+r}\right)
 +\frac{r}{1+r}
 \right].
-\tag{R6}
+\qquad\text{(R6)}
+\end{aligned}
 ```
 
 For every $`x\ge r`$, equality is attained among bounded-hazard waiting distributions by
 
 ```math
-X_*=\tau+E,\qquad
-E\sim\mathrm{Exp}(\Gamma),\qquad
-\tau=\frac1\gamma
+\begin{aligned}
+X_*&=\tau+E,\\
+E&\sim\mathrm{Exp}(\Gamma),\\
+\tau&=\frac1\gamma
 \ln\!\left(\frac{1+x}{1+r}\right).
-\tag{R7}
+\qquad\text{(R7)}
+\end{aligned}
 ```
 
 Except for equality almost everywhere of the survival functions, this fixed-mean optimizer is unique.
@@ -148,8 +161,10 @@ Its Laplace transform is $`p=e^{-\gamma\tau}/(1+r)`$, so it has the required act
 Compare any other feasible survival $`S`$ at the same $`p`$. Before $`\tau`$, $`S-S_*\le0`$. After $`\tau`$, the ratio $`S/S_*`$ is nondecreasing, since its logarithmic derivative is $`\Gamma-h_0(t)\ge0`$. Consequently $`S-S_*`$ can change sign at most once, from negative to positive. The equal-Laplace-transform condition says
 
 ```math
-\int_0^\infty e^{-\gamma t}[S(t)-S_*(t)]\,dt=0.
-\tag{R8}
+\begin{aligned}
+\int_0^\infty e^{-\gamma t}[S(t)-S_*(t)]\,dt&=0.
+\qquad\text{(R8)}
+\end{aligned}
 ```
 
 Integration by parts also gives
@@ -182,8 +197,10 @@ h(x)=\ln(1+x)-\frac{2x}{x+2}.
 For each $`r>0`$, there is a unique $`x_P>r`$ satisfying
 
 ```math
-h(x_P)=K(r).
-\tag{R9}
+\begin{aligned}
+h(x_P)&=K(r).
+\qquad\text{(R9)}
+\end{aligned}
 ```
 
 Indeed,
@@ -204,9 +221,11 @@ G_r'(x)
 Thus $`x_P`$ is the unique global minimum. Using (R9) in (R6),
 
 ```math
-\min_{x\ge r}G_r(x)=\frac{x_P}{x_P+2},\qquad
-P_{\rm hazard}(r)=1+\frac2{x_P}.
-\tag{R10}
+\begin{aligned}
+\min_{x\ge r}G_r(x)&=\frac{x_P}{x_P+2},\\
+P_{\rm hazard}(r)&=1+\frac2{x_P}.
+\qquad\text{(R10)}
+\end{aligned}
 ```
 
 Here $`P_{\rm hazard}`$ denotes the relaxed bounded-hazard optimum, not the proved optimum of finite quantum clocks.
@@ -221,11 +240,13 @@ h(x)=\frac{x^3}{12}+O(x^4),
 so
 
 ```math
-x_P\sim 6^{1/3}r^{2/3},\qquad
-\min G_r\sim\frac{3}{6^{2/3}}r^{2/3},\qquad
+\begin{aligned}
+x_P&\sim 6^{1/3}r^{2/3},\\
+\min G_r&\sim\frac{3}{6^{2/3}}r^{2/3},\\
 P_{\rm hazard}(r)
-\sim\frac{6^{2/3}}3R^{2/3}.
-\tag{R11}
+&\sim\frac{6^{2/3}}3R^{2/3}.
+\qquad\text{(R11)}
+\end{aligned}
 ```
 
 The finite-quantum construction establishes the same logarithmic exponent, not this asymptotic constant. Its source transfer is developed in the [quantum construction](quantum_construction.md). The stricter [classical rate budget](classical_optimum.md) supplies a different, square-root precision optimum: a tick-hazard bound alone would allow arbitrarily fast hidden classical stages and would not establish that separation.
@@ -235,9 +256,11 @@ The finite-quantum construction establishes the same logarithmic exponent, not t
 The actual noisy tick hazard also remains at most $`\Gamma`$: the conditional tick intensity is the expectation of the bounded tick effect in the normalized no-tick state, while faults merely change that state. Therefore
 
 ```math
-\mathrm{Var}T\ge\Gamma^{-2},\qquad
-P\le(\Gamma\mu)^2.
-\tag{R12}
+\begin{aligned}
+\mathrm{Var}T&\ge\Gamma^{-2},\\
+P&\le(\Gamma\mu)^2.
+\qquad\text{(R12)}
+\end{aligned}
 ```
 
 One direct proof writes $`T=H^{-1}(E)`$, where $`E\sim\mathrm{Exp}(1)`$ and $`H`$ is the actual cumulative hazard. The hazard cap implies
@@ -260,20 +283,24 @@ This is the established decay-rate accuracy-resolution obstruction of [Meier et 
 
 ## Stability using only the first two intrinsic moments
 
-**Lemma R2 — second-moment transfer.** Suppose $`\mu_0=\mathbb E X<\infty`$, $`c_0=\mathrm{Var}X/\mu_0^2\le1`$, and $`z=\gamma\mu_0\le1/4`$. Then
+**Lemma R2 — second-moment transfer.** Suppose $`\mu_0=\mathbb E X\lt\infty`$, $`c_0=\mathrm{Var}X/\mu_0^2\le1`$, and $`z=\gamma\mu_0\le1/4`$. Then
 
 ```math
-\mu_0\left[1-\frac{z(1+c_0)}2\right]
-\le\mu\le\frac{\mu_0}{1-z},
-\tag{R13}
+\begin{aligned}
+\mu_0\left[1-\frac{z(1+c_0)}2\right]&\le\mu,\\
+\mu&\le\frac{\mu_0}{1-z}.
+\qquad\text{(R13)}
+\end{aligned}
 ```
 
 and
 
 ```math
+\begin{aligned}
 \frac{\mathrm{Var}T}{\mu^2}
-\le c_0+40z.
-\tag{R14}
+&\le c_0+40z.
+\qquad\text{(R14)}
+\end{aligned}
 ```
 
 **Proof.** The elementary inequalities $`e^{-u}\ge1-u`$ and $`1-e^{-u}\ge u-u^2/2`$ imply

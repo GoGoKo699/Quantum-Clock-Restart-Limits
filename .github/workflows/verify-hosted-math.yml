@@ -42,6 +42,7 @@ jobs:
             --root "$GITHUB_WORKSPACE" \
             --repository "$GITHUB_REPOSITORY" \
             --revision "$GITHUB_SHA" \
+            --contract verification/hosted_math/headline-contract.json \
             --output "$RUNNER_TEMP/hosted-math-evidence"
 
       - name: Retain the report, captured MathML, HTML and screenshots
