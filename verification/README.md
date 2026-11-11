@@ -53,3 +53,17 @@ The dimension 32 example also beats the universal classical timing-diffusion flo
 The exact classical optimizer and delayed-exponential hazard envelope have different domains. A sharp hazard constant is a relaxed waiting-law optimum, and is not claimed to be realized by a finite autonomous quantum clock. The quantum logarithmic exponent uses the source-normalized analytical construction; finite diagnostics do not replace that source transfer.
 
 All actual waiting times include failed attempts and hidden resets. The elapsed-time statement takes the long observation-time limit at a fixed device before optimizing its size and noise ratio. No generic finite-horizon guarantee follows from a passing numerical suite.
+
+## Hosted mathematical display
+
+The read-only `Verify hosted mathematics` workflow compares every tracked Markdown equation with its actual commit-pinned GitHub rendering at widths 1440 and 760. It runs on `review/**` branch pushes and can also be dispatched once present on the default branch. Its token has only `contents: read`; it uses no repository secrets and makes no source changes.
+
+The collector and structural checker are in `verification/hosted_math/`. With Node.js 18 or later, Python 3.10 or later, Git, Playwright 1.56.1, MathJax 3.2.1 and the corresponding Chromium installed, run:
+
+```bash
+node verification/hosted_math/capture_hosted_math.cjs \
+  --root "$PWD" --repository GoGoKo699/Quantum-Clock-Restart-Limits \
+  --revision "$(git rev-parse HEAD)" --output /absolute/new-empty-capture-directory
+```
+
+Dependencies may be installed outside the checkout and located with `NODE_PATH`. The saved report binds the source hashes, MathML comparisons, runtime and screenshots. An automated pass checks structure and selected geometry, not scientific truth or a complete visual review. Inspect the screenshots as well. GitHub Actions artifacts expire; they are reproducible verification outputs rather than permanent scientific data.

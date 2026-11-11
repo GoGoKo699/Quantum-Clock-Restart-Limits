@@ -19,7 +19,7 @@ The mean period is calibrated before operation. During operation the output is t
 
 ```math
 \lim_{t\to\infty}
-\frac{\operatorname{Var}(\widehat t)}t
+\frac{\mathrm{Var}(\widehat t)}t
 =\lim_{t\to\infty}
 \frac{\mathbb E[(\widehat t-t)^2]}t
 =\frac{\sigma^2}{\mu}
@@ -104,7 +104,7 @@ x_D^2/\gamma,&0<r<1,\quad k(x_D)=K(r),\\
 \tag{T7}
 ```
 
-The delayed-exponential distribution in the hazard theorem attains this relaxed optimum. Its deterministic-delay branch is an upper envelope on clock performance, not an asserted finite-quantum construction. For $`r\ge1`$, however, the boundary distribution is simply $`\operatorname{Exp}(\Gamma)`$, realized by a one-state Poisson tick clock. Thus the quantum and classical timing optima both equal $`1/\Gamma`$ exactly when $`\gamma\ge\Gamma`$. This statement concerns timing diffusion, not tick precision.
+The delayed-exponential distribution in the hazard theorem attains this relaxed optimum. Its deterministic-delay branch is an upper envelope on clock performance, not an asserted finite-quantum construction. For $`r\ge1`$, however, the boundary distribution is simply $`\mathrm{Exp}(\Gamma)`$, realized by a one-state Poisson tick clock. Thus the quantum and classical timing optima both equal $`1/\Gamma`$ exactly when $`\gamma\ge\Gamma`$. This statement concerns timing diffusion, not tick precision.
 
 As $`r\downarrow0`$, $`k(x)=x^3/3+O(x^4)`$ and $`K(r)=r^2/2+O(r^3)`$. Hence
 
@@ -123,7 +123,7 @@ Fix $`\Gamma>0`$ and write $`\mathcal D_Q^*(R)`$ for the infimum of (T2) over th
 
 ```math
 \mu_0=\Theta_\epsilon(d/\Gamma),\qquad
-c_0=\frac{\operatorname{Var}X}{\mu_0^2}
+c_0=\frac{\mathrm{Var}X}{\mu_0^2}
 \le C_\epsilon d^{-2+\epsilon}.
 \tag{T9}
 ```
@@ -134,7 +134,7 @@ For $`z=\gamma\mu_0\to0`$, the second-moment transfer and mean control give
 
 ```math
 \mathcal D
-=\mu\,\operatorname{CV}(T)^2
+=\mu\,\mathrm{CV}(T)^2
 \le\frac{\mu_0}{1-z}(c_0+40z)
 \le\frac{C_\epsilon'}\Gamma
 \left[d^{-1+\epsilon}+\frac{d^2}{R}\right].
@@ -169,14 +169,14 @@ After the reset faults are added, total escape, including a virtual reset that l
 
 ```math
 T=\sum_{j=1}^{K}E_j,\qquad
-E_j\stackrel{\rm iid}{\sim}\operatorname{Exp}(\Gamma+\gamma),
+E_j\stackrel{\rm iid}{\sim}\mathrm{Exp}(\Gamma+\gamma),
 ```
 
 where the absorption step $`K`$ of the embedded discrete chain is independent of those exponential holding times. Therefore
 
 ```math
 \mu=\frac{\mathbb EK}{\Gamma+\gamma},\qquad
-\sigma^2=\frac{\mathbb EK+\operatorname{Var}K}{(\Gamma+\gamma)^2},\qquad
+\sigma^2=\frac{\mathbb EK+\mathrm{Var}K}{(\Gamma+\gamma)^2},\qquad
 \mathcal D_C\ge\frac1{\Gamma+\gamma}.
 \tag{T13}
 ```

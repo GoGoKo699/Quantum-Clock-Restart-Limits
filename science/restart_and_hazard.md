@@ -14,7 +14,7 @@ b=\mathbb E[Xe^{-\gamma X}]=-\phi'(\gamma).
 
 The condition $`p>0`$ excludes a clock that never ticks. It also guarantees that $`T`$ has an exponential tail: choose a finite $`a`$ with $`\Pr(X\le a)>0`$. From every unfinished state, an interval of length $`a+1`$ has a fixed positive probability of containing a fault in its first unit of time, followed by no fault and an intrinsic tick during the next $`a`$ units. Repeating this bound gives a geometric tail on fixed-length intervals. Thus all moments of $`T`$ used below exist, even when the intrinsic distribution has a defective or heavy tail.
 
-Use the actual noisy mean $`\mu=\mathbb E T`$, variance $`\sigma^2=\operatorname{Var}T`$, and tick precision
+Use the actual noisy mean $`\mu=\mathbb E T`$, variance $`\sigma^2=\mathrm{Var}T`$, and tick precision
 
 ```math
 P=\frac{\mu^2}{\sigma^2},\qquad
@@ -36,7 +36,7 @@ F_\gamma(s)
 F_\gamma(s).
 ```
 
-The first term describes a successful attempt. The coefficient of the second term is $`\mathbb E[e^{-sE}\mathbf 1_{E<X}]`$ for $`E\sim\operatorname{Exp}(\gamma)`$, after which the completion process starts afresh. Solving yields
+The first term describes a successful attempt. The coefficient of the second term is $`\mathbb E[e^{-sE}\mathbf 1_{E<X}]`$ for $`E\sim\mathrm{Exp}(\gamma)`$, after which the completion process starts afresh. Solving yields
 
 ```math
 F_\gamma(s)
@@ -117,7 +117,7 @@ For every $`x\ge r`$, equality is attained among bounded-hazard waiting distribu
 
 ```math
 X_*=\tau+E,\qquad
-E\sim\operatorname{Exp}(\Gamma),\qquad
+E\sim\mathrm{Exp}(\Gamma),\qquad
 \tau=\frac1\gamma
 \ln\!\left(\frac{1+x}{1+r}\right).
 \tag{R7}
@@ -235,12 +235,12 @@ The finite-quantum construction establishes the same logarithmic exponent, not t
 The actual noisy tick hazard also remains at most $`\Gamma`$: the conditional tick intensity is the expectation of the bounded tick effect in the normalized no-tick state, while faults merely change that state. Therefore
 
 ```math
-\operatorname{Var}T\ge\Gamma^{-2},\qquad
+\mathrm{Var}T\ge\Gamma^{-2},\qquad
 P\le(\Gamma\mu)^2.
 \tag{R12}
 ```
 
-One direct proof writes $`T=H^{-1}(E)`$, where $`E\sim\operatorname{Exp}(1)`$ and $`H`$ is the actual cumulative hazard. The hazard cap implies
+One direct proof writes $`T=H^{-1}(E)`$, where $`E\sim\mathrm{Exp}(1)`$ and $`H`$ is the actual cumulative hazard. The hazard cap implies
 
 ```math
 H^{-1}(v)-H^{-1}(u)\ge\frac{v-u}{\Gamma}
@@ -250,7 +250,7 @@ H^{-1}(v)-H^{-1}(u)\ge\frac{v-u}{\Gamma}
 For independent copies $`T,T'`$ and $`E,E'`$,
 
 ```math
-\operatorname{Var}T
+\mathrm{Var}T
 =\frac12\mathbb E[(T-T')^2]
 \ge\frac1{2\Gamma^2}\mathbb E[(E-E')^2]
 =\Gamma^{-2}.
@@ -260,7 +260,7 @@ This is the established decay-rate accuracy-resolution obstruction of [Meier et 
 
 ## Stability using only the first two intrinsic moments
 
-**Lemma R2 — second-moment transfer.** Suppose $`\mu_0=\mathbb E X<\infty`$, $`c_0=\operatorname{Var}X/\mu_0^2\le1`$, and $`z=\gamma\mu_0\le1/4`$. Then
+**Lemma R2 — second-moment transfer.** Suppose $`\mu_0=\mathbb E X<\infty`$, $`c_0=\mathrm{Var}X/\mu_0^2\le1`$, and $`z=\gamma\mu_0\le1/4`$. Then
 
 ```math
 \mu_0\left[1-\frac{z(1+c_0)}2\right]
@@ -271,7 +271,7 @@ This is the established decay-rate accuracy-resolution obstruction of [Meier et 
 and
 
 ```math
-\frac{\operatorname{Var}T}{\mu^2}
+\frac{\mathrm{Var}T}{\mu^2}
 \le c_0+40z.
 \tag{R14}
 ```
@@ -298,7 +298,7 @@ Also $`1-(1+u)e^{-u}\le u^2/2`$ for $`u\ge0`$. Equation (R2) therefore gives
 Combining this with the mean lower bound,
 
 ```math
-1+\frac{\operatorname{Var}T}{\mu^2}
+1+\frac{\mathrm{Var}T}{\mu^2}
 \le\frac{1+c_0}{(1-z)^4}.
 ```
 

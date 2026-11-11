@@ -19,7 +19,7 @@ A tick restores $`\alpha`$. An independent Poisson process of rate $`\gamma`$ al
 The performance measure is the renewal precision
 
 ```math
-\mathcal P=\frac{\mathbb E[T]^2}{\operatorname{Var}T}.
+\mathcal P=\frac{\mathbb E[T]^2}{\mathrm{Var}T}.
 ```
 
 Write
@@ -103,7 +103,7 @@ The mean and squared coefficient of variation become
 
 ```math
 \mu=\frac{1-p}{\gamma p},\qquad
-\operatorname{CV}(T)^2
+\mathrm{CV}(T)^2
 =\frac{1-p^2-2bh}{(1-p)^2}.
 ```
 
@@ -235,7 +235,7 @@ gives $`\mathcal P_{\rm C}^{*}\sim\sqrt{3/a}/2`$. Integer rounding changes $`z`$
 Dropping the discrete grid and applying Jensen directly to $`g`$ yields the convenient smooth relaxation
 
 ```math
-\operatorname{CV}(T)^2
+\mathrm{CV}(T)^2
 \geq\frac{1-p^2+2c\,p\log p}{(1-p)^2}.
 ```
 

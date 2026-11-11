@@ -1,0 +1,54 @@
+name: Verify hosted mathematics
+
+on:
+  push:
+    branches:
+      - 'review/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hosted-math:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the exact public revision
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install the pinned capture dependencies outside the checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --prefix "$RUNNER_TEMP/hosted-math-deps" --no-audit --no-fund --save-exact playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/hosted-math-deps/node_modules/.bin/playwright" install --with-deps chromium
+
+      - name: Capture real commit-pinned GitHub pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          NODE_PATH="$RUNNER_TEMP/hosted-math-deps/node_modules" node verification/hosted_math/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" \
+            --repository "$GITHUB_REPOSITORY" \
+            --revision "$GITHUB_SHA" \
+            --output "$RUNNER_TEMP/hosted-math-evidence"
+
+      - name: Retain the report, captured MathML, HTML and screenshots
+        if: always()
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: hosted-math-${{ github.sha }}
+          path: ${{ runner.temp }}/hosted-math-evidence/
+          if-no-files-found: warn
+          retention-days: 14

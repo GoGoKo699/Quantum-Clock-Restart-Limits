@@ -9,7 +9,7 @@ A more regular clock can spend longer traversing its internal states before each
 Let $`\Gamma`$ bound intrinsic dynamical strengths and let $`\gamma`$ be the rate of independent, unobserved faults. Every normal tick and every fault restores the same complete internal state. Faults produce no tick and retain no usable memory. Define
 ```math
 R=\Gamma/\gamma,\qquad
-P=\frac{(\mathbb E T)^2}{\operatorname{Var}T},
+P=\frac{(\mathbb E T)^2}{\mathrm{Var}T},
 ```
 where $`T`$ is the actual interval between observed ticks, including all interrupted attempts.
 
@@ -26,7 +26,7 @@ The elapsed-time statement uses
 ```math
 \widehat t=\mu N(t),\qquad
 \mathcal D=\lim_{t\to\infty}\frac{\mathbb E[(\widehat t-t)^2]}{t}
-=\frac{\operatorname{Var}T}{\mu},
+=\frac{\mathrm{Var}T}{\mu},
 \quad\mu=\mathbb E T.
 ```
 For each fixed finite clock, the long observation-time limit is taken first. Only then are clock designs and the weak-fault limit optimized. Startup and calibration can affect a jointly growing finite observation horizon.
@@ -57,6 +57,7 @@ The quantum construction inherits quasiideal clocks from Woods et al. Its source
 
 | Goal | Start here |
 |---|---|
+| Learn the event model and its consequences | [Learning route](learning/README.md) · [Anchor bridge](learning/BRIDGE.md) · [Thirty milestones](learning/MILESTONES.md) |
 | Follow the connected scientific story | [Scientific overview](science/README.md) |
 | Check assumptions, observations and charged resources | [Model](science/model.md) |
 | Reconstruct the universal restart constraint | [Restart and hazard bounds](science/restart_and_hazard.md) |

@@ -16,7 +16,7 @@ Fix a strength $`\Gamma>0`$. For every fixed $`\epsilon\in(0,1)`$, there is a fa
 Q_d:=\sum_k J_{d,k}^{\dagger}J_{d,k}&\leq\Gamma I,\\
 \frac{2\pi}{3}\frac d\Gamma
 \leq\mu_{0,d}&\leq8\pi\frac d\Gamma,\\
-c_{0,d}:=\frac{\operatorname{Var}X_d}{\mu_{0,d}^{2}}
+c_{0,d}:=\frac{\mathrm{Var}X_d}{\mu_{0,d}^{2}}
 &\leq24d^{-2+\epsilon}.
 \end{aligned}
 ```
@@ -117,9 +117,9 @@ Here $`\mathcal S_d(0)`$ is the set of the $`d`$ nearest integers specified by t
 Define
 
 ```math
-I_N=\int_{\mathbb R}\operatorname{sinc}^{2N}(x)\,dx,
+I_N=\int_{\mathbb R}\mathrm{sinc}^{2N}(x)\,dx,
 \qquad
-\operatorname{sinc}(x)=\frac{\sin(\pi x)}{\pi x},
+\mathrm{sinc}(x)=\frac{\sin(\pi x)}{\pi x},
 \qquad
 C_0=1+2\pi N+\frac{2N+1}{I_N}.
 ```
@@ -153,7 +153,7 @@ B_d&=\frac{1-2\pi/(\delta d^2)}{I_N},\\
 \bar V_{0,d}(x)
 &=\frac1{\delta d^2}
 +\nu_d B_d\sum_{p\in\mathbb Z}
-\operatorname{sinc}^{2N}\!\bigl(\nu_d(x-x_0-2\pi p)\bigr).
+\mathrm{sinc}^{2N}\!\bigl(\nu_d(x-x_0-2\pi p)\bigr).
 \end{aligned}
 ```
 
@@ -180,7 +180,7 @@ The complete fixed-period generator is
 +\sum_{k=0}^{d-1}\mathcal D[J_{d,k}^{(0)}](\rho).
 ```
 
-Each jump output is proportional to $`\rho_{0,d}`$. The no-tick amplitude generator is $`-iH_d^{(0)}-V_d^{(0)}`$, and the first-tick density is $`2\operatorname{tr}(V_d^{(0)}\rho(t))`$, as in the source's Eqs. (346)–(351).
+Each jump output is proportional to $`\rho_{0,d}`$. The no-tick amplitude generator is $`-iH_d^{(0)}-V_d^{(0)}`$, and the first-tick density is $`2\mathrm{tr}(V_d^{(0)}\rho(t))`$, as in the source's Eqs. (346)–(351).
 
 ## 3. Bounding the sum of all tick effects
 
@@ -198,7 +198,7 @@ The source's derivative estimate, Lemma 28/Eq. (530), implies
 \max_x\bar V_{0,d}(x)\leq\nu_d C_0.
 ```
 
-The displayed choice of $`C_0`$ is one explicit admissible constant. To check it, the Fourier transform of $`\operatorname{sinc}^{2N}`$ is an $`N`$-fold convolution of the triangular density. It is nonnegative, supported on $`[-N,N]`$ and has supremum at most one. The nonconstant Fourier coefficients of the periodic potential are therefore supported on $`|\ell|\leq2\pi\nu_dN`$. Summing their absolute values, including the constant baseline separately, bounds the zeroth derivative by
+The displayed choice of $`C_0`$ is one explicit admissible constant. To check it, the Fourier transform of $`\mathrm{sinc}^{2N}`$ is an $`N`$-fold convolution of the triangular density. It is nonnegative, supported on $`[-N,N]`$ and has supremum at most one. The nonconstant Fourier coefficients of the periodic potential are therefore supported on $`|\ell|\leq2\pi\nu_dN`$. Summing their absolute values, including the constant baseline separately, bounds the zeroth derivative by
 
 ```math
 \nu_d\left(1+\frac{2N+1}{I_N}\right).
@@ -301,7 +301,7 @@ For large $`d`$, if $`X_d^{(0)}`$ denotes the source tick time, they imply
 The first inequality gives $`\mathbb E X_d^{(0)}\geq1/6`$. If its mean were greater than two, the second inequality would imply
 
 ```math
-\operatorname{Var}X_d^{(0)}
+\mathrm{Var}X_d^{(0)}
 \geq\frac12\bigl(\mathbb E X_d^{(0)}-1\bigr)^2
 >\frac18\bigl(\mathbb E X_d^{(0)}\bigr)^2.
 ```
@@ -328,7 +328,7 @@ Their combined generator and total effect are
 ```math
 \begin{aligned}
 \sum_\ell\mathcal D[F_{d,\ell}](\rho)
-&=\gamma\bigl(\rho_{0,d}\operatorname{tr}\rho-\rho\bigr),\\
+&=\gamma\bigl(\rho_{0,d}\mathrm{tr}\rho-\rho\bigr),\\
 \sum_\ell F_{d,\ell}^{\dagger}F_{d,\ell}&=\gamma I.
 \end{aligned}
 ```
@@ -342,7 +342,7 @@ Both the clean and faulty generators are time independent. This construction nee
 The [second-moment restart estimate](restart_and_hazard.md) applies whenever $`c_{0,d}\leq1`$ and $`\gamma\mu_{0,d}\leq1/4`$:
 
 ```math
-\frac{\operatorname{Var}T_d^{\mathrm{fault}}}
+\frac{\mathrm{Var}T_d^{\mathrm{fault}}}
 {(\mathbb E T_d^{\mathrm{fault}})^2}
 \leq c_{0,d}+40\gamma\mu_{0,d}.
 ```
@@ -350,7 +350,7 @@ The [second-moment restart estimate](restart_and_hazard.md) applies whenever $`c
 Using the resource lemma and $`R=\Gamma/\gamma`$ gives
 
 ```math
-\frac{\operatorname{Var}T_d^{\mathrm{fault}}}
+\frac{\mathrm{Var}T_d^{\mathrm{fault}}}
 {(\mathbb E T_d^{\mathrm{fault}})^2}
 \leq24d^{-2+\epsilon}+320\pi\frac dR.
 ```

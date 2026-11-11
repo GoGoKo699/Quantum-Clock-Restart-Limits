@@ -12,7 +12,7 @@ P=\frac{\mu^2}{v}.
 ```
 This definition concerns regularity of actual output ticks. For each fixed device, the passive output count $`N(t)`$ has long-time rate $`1/\mu`$. Its calibrated count estimator $`\widehat t=\mu N(t)`$ has timing diffusion
 ```math
-\mathcal D=\lim_{t\to\infty}\frac{\operatorname{Var}(\widehat t)}{t}
+\mathcal D=\lim_{t\to\infty}\frac{\mathrm{Var}(\widehat t)}{t}
 =\frac{v}{\mu}.
 ```
 The [timing account](timing_diffusion.md) proves the ordered-limit statement and distinguishes precision from elapsed-time accuracy. The mean is a supplied calibration of the specified device, rather than an unknown parameter estimated jointly with time.
@@ -21,7 +21,7 @@ The [timing account](timing_diffusion.md) proves the ordered-limit statement and
 
 The internal Hilbert space is finite dimensional. A normal tick is a completely positive map
 ```math
-\mathcal J(\rho)=\rho_0\operatorname{tr}(K\rho),\qquad K\geq0,
+\mathcal J(\rho)=\rho_0\mathrm{tr}(K\rho),\qquad K\geq0,
 ```
 where $`\rho_0`$ is the fixed initial state. Choose any Kraus operators $`J_a`$ for this map, so that $`\sum_aJ_a^\dagger J_a=K`$. Several microscopic channels may implement an observed tick. Their unobserved labels are summed; the reset condition is imposed on that summed map, whose normalized output is always $`\rho_0`$.
 
@@ -45,7 +45,7 @@ The second bound is on the total nominal event effect, including all tick channe
 Faults add
 ```math
 \mathcal L_{\rm fault}(\rho)
-=\gamma\big[\rho_0\operatorname{tr}\rho-\rho\big],
+=\gamma\big[\rho_0\mathrm{tr}\rho-\rho\big],
 \qquad \gamma>0.
 ```
 For a spectral decomposition $`\rho_0=\sum_a p_a|a\rangle\langle a|`$, this has jump operators

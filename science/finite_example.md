@@ -15,7 +15,7 @@ U_{jr}=\frac1{\sqrt d}e^{2\pi i jr/d},
 \qquad
 E_r=-1+\frac{2r}{d-1},
 \qquad
-H=U\operatorname{diag}(E_r)U^{\dagger}.
+H=U\mathrm{diag}(E_r)U^{\dagger}.
 ```
 
 The centered Hamiltonian norm is exactly one. Define signed phase coordinates
@@ -42,7 +42,7 @@ The normalized start state is the following finite Gaussian vector in the phase 
 Here $`C`$ makes $`\sum_j|\psi_j|^2=1`$. The tick effect is diagonal in the phase basis:
 
 ```math
-Q=\operatorname{diag}(q_j),
+Q=\mathrm{diag}(q_j),
 \qquad
 q_j=b+(1-b)\exp\!\left[-\frac{v_j^2}{2w^2}\right],
 \qquad
@@ -68,7 +68,7 @@ F_j=\sqrt\gamma\,|\psi\rangle\langle j|,
 \sum_jF_j^{\dagger}F_j=\gamma I.
 ```
 
-Their generator is exactly the [specified restart fault](model.md): $`\gamma(\rho_0\operatorname{tr}\rho-\rho)`$. The full internal clockwork is reset; no protected auxiliary register is used. The passive output retains only actual ticks. The Hamiltonian and all jump operators are time independent.
+Their generator is exactly the [specified restart fault](model.md): $`\gamma(\rho_0\mathrm{tr}\rho-\rho)`$. The full internal clockwork is reset; no protected auxiliary register is used. The passive output retains only actual ticks. The Hamiltonian and all jump operators are time independent.
 
 This family uses an engineered Fourier Hamiltonian and reset interface. Geometric locality and microscopic synthesis costs are outside the resource model. A dimension-independent bound on the entire Hamiltonian and summed tick effect is nevertheless enforced exactly; no per-channel allowance or growing bandwidth is used.
 
@@ -92,8 +92,8 @@ A_\gamma Y+YA_\gamma^{\dagger}&=-\rho_0,\\
 A_\gamma Z+ZA_\gamma^{\dagger}&=-Y,
 \end{aligned}
 \qquad
-u=\operatorname{tr}Y,
-\quad z=\operatorname{tr}Z,
+u=\mathrm{tr}Y,
+\quad z=\mathrm{tr}Z,
 \quad p=1-\gamma u.
 ```
 
@@ -120,14 +120,14 @@ v=\frac{2z-u^2}{p^2},
 P=\frac{u^2}{2z-u^2}.
 ```
 
-The calculation additionally checks the absorption normalization $`\operatorname{tr}(QY)=p`$. The strictly positive baseline makes no-tick survival decay at least as $`e^{-bt}`$, including when the faults are active, so the infinite-horizon integrals and moments are well defined.
+The calculation additionally checks the absorption normalization $`\mathrm{tr}(QY)=p`$. The strictly positive baseline makes no-tick survival decay at least as $`e^{-bt}`$, including when the faults are active, so the infinite-horizon integrals and moments are well defined.
 
 An independent calculation constructs the actual no-tick density generator
 
 ```math
 \mathcal K_\gamma(X)
 =AX+XA^{\dagger}
-+\gamma\bigl(\rho_0\operatorname{tr}X-X\bigr)
++\gamma\bigl(\rho_0\mathrm{tr}X-X\bigr)
 ```
 
 as a $`d^2\times d^2`$ matrix. It solves
@@ -138,7 +138,7 @@ as a $`d^2\times d^2`$ matrix. It solves
 -\mathcal K_\gamma(M_1)=M_0,
 ```
 
-and reads $`\mu=\operatorname{tr}M_0`$ and $`\mathbb E T^2=2\operatorname{tr}M_1`$. This second method inserts the fault generator directly and uses no restart transform. It is run for the 16- and 32-dimensional examples.
+and reads $`\mu=\mathrm{tr}M_0`$ and $`\mathbb E T^2=2\mathrm{tr}M_1`$. This second method inserts the fault generator directly and uses no restart transform. It is run for the 16- and 32-dimensional examples.
 
 ## 3. Finite results
 
